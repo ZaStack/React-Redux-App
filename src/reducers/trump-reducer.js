@@ -1,18 +1,13 @@
 import { FETCH_DATA, UPDATE_QUOTE, SET_ERROR } from '../actions';
 
-const initialState = {
-    quote: {},
-    isFetchingData: false,
-    error: ''
-};
+const initialState = {};
 
-const trumpReducer = (state - initialState, action) => {
+export const trumpReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_DATA:
             return {
                 ...state,
-                isFetchingData: true,
-                quote: {}
+                isFetchingData: true
             };
         case UPDATE_QUOTE:
             return {
@@ -30,3 +25,4 @@ const trumpReducer = (state - initialState, action) => {
             return state;
     }
 };
+
